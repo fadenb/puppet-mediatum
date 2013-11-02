@@ -1,0 +1,100 @@
+[host]
+name=<%= @cfg_hostname %>
+port=<%= @port %>1
+threads=8
+
+[config]
+reindex_time=3600
+searcher=fts3  # fts3|magpy|<empty>
+oaibasename=mediatum repository
+
+[urn]
+institutionid=00
+pubtypes=epub  # multiple values separated with semicolon (;) are possible
+namespace=     # nbn:de:bvb | nbn:en:1111 | publicid | etc 
+
+[ftp]
+activate=false
+port=8021
+
+[paths]
+datadir=/data/
+searchstore=/data/search/
+tempdir=/tmp/
+
+[database]
+type=sqlite # sqlite or mysql
+#dbhost=localhost
+#dbport=3306 # default port for mysql
+#db=mediatum
+#user=mediatumadmin
+#passwd=
+#cache_size=100000
+
+[ldap]
+activate=false
+server=serverurl
+password=password
+searchfilter=authLogin=[username]
+username=
+basedn=
+attributes=attribute,attribute1
+user_login=attribute
+user_lastname=attribute
+user_firstname=attribute
+user_email=attribute
+user_comment=attribute
+user_group=attribute
+user_org=attribute
+
+[archive]
+activate=false
+class=#
+interval=3600
+
+[z3950]
+activate=false
+port=2101
+
+[marc21]
+mapping_name=marc21
+
+[user]
+adminuser=Administrator
+guestuser=Gast
+admingroup=Administration
+passwd=ABC
+
+[admin]
+pageitems=10
+
+[logging]
+path=/data/log/
+file.everything=/data/log/everything.log
+file.database=/data/log/database.log
+file.backend=/data/log/backend.log
+file.frontend=/data/log/frontend.log
+file.editor=/data/log/editor.log
+file.usertracing=/data/log/user.log
+file.athana=/data/log/athana.log
+file.errors=/data/log/errors.log
+
+[server]
+mail=mysmtpserver.com
+
+[email]
+admin=admin@mediatum.org
+workflow=admin@mediatum.org
+
+[oai]
+formats=mediatum # format for testing
+
+schema.mediatum=http://mediatum/no-schema-defined
+namespace.mediatum=http://www.mediatum.org/oai/mediatum
+
+[plugins]
+
+[i18n]
+languages=en,de
+en=i18n/mediatum-en.po
+de=i18n/mediatum-de.po

@@ -5,6 +5,10 @@ class mediatum::config (
   $config_owner   = $mediatum::params::config_owner,
   $config_group   = $mediatum::params::config_group,
   $config_mode    = $mediatum::params::config_mode,
+
+  $cfg_hostname   = $hostname,
+  $cfg_port       = $mediatum::params::cfg_port,
+
 ) {
   anchor { 'mediatum::config::start': }
   anchor { 'mediatum::config::end': }
