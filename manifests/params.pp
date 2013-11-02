@@ -9,8 +9,8 @@ class mediatum::params {
       $config_state  = 'present'
       $config_folder = '/etc/mediatum/'
       $config_file   = '/etc/mediatum/mediatum.cfg'
-      $config_owner  = 'root'
-      $config_group  = 'root'
+      $config_owner  = 'mediatum'
+      $config_group  = 'mediatum'
       $config_mode   = '0755'
 
       # application config
