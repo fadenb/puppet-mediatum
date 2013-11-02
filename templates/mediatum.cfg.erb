@@ -18,9 +18,9 @@ activate=false
 port=8021
 
 [paths]
-datadir=/data/
-searchstore=/data/search/
-tempdir=/tmp/
+datadir=<%= @cfg_data_dir %>
+searchstore=<%= @cfg_searchstore_dir %>
+tempdir=<%= @cfg_temp_dir %>
 
 [database]
 type=sqlite # sqlite or mysql
@@ -69,15 +69,15 @@ passwd=ABC
 pageitems=10
 
 [logging]
-path=/data/log/
-file.everything=/data/log/everything.log
-file.database=/data/log/database.log
-file.backend=/data/log/backend.log
-file.frontend=/data/log/frontend.log
-file.editor=/data/log/editor.log
-file.usertracing=/data/log/user.log
-file.athana=/data/log/athana.log
-file.errors=/data/log/errors.log
+path=<%= @cfg_log_dir %>
+file.everything=<%= @cfg_log_dir -%>/everything.log
+file.database=<%= @cfg_log_dir -%>/database.log
+file.backend=<%= @cfg_log_dir -%>/backend.log
+file.frontend=<%= @cfg_log_dir -%>/frontend.log
+file.editor=<%= @cfg_log_dir -%>/editor.log
+file.usertracing=<%= @cfg_log_dir -%>/user.log
+file.athana=<%= @cfg_log_dir -%>/athana.log
+file.errors=<%= @cfg_log_dir -%>/errors.log
 
 [server]
 mail=mysmtpserver.com
