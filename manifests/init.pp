@@ -1,9 +1,8 @@
-class mediatum (
-
-
-) inherits params {
+class mediatum inherits params {
+  anchor { 'mediatum::start': }   ->
   class { 'mediatum::package': }  ->
   class { 'mediatum::config': }   ~>
   class { 'mediatum::service': }  ->
-  Class [ 'mediatum' ]
+  Class [ 'mediatum' ]            ->
+  anchor { 'mediatum::end': }
 }
