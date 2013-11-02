@@ -25,7 +25,7 @@ class mediatum::config (
     before  => Anchor['mediatum::config::end'],
 
   }
-  file { $config_folder:
+  file { $config_file:
     ensure  => $config_state,
     owner   => $config_owner,
     group   => $config_group,
