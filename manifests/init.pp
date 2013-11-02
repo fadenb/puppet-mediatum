@@ -5,5 +5,5 @@ class mediatum (
   class { 'mediatum::package': }  ->
   class { 'mediatum::config': }   ~>
   class { 'mediatum::service': }  ->
-  Class [ 'ntp' ]
+  Class [ 'mediatum' ]
 }
