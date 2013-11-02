@@ -16,10 +16,10 @@ class mediatum::params {
       # application config
       $cfg_port             = '8081'
       $cfg_base_dir         = '/srv/mediatum'
-      $cfg_data_dir         = "${cfg_base_dir}/data/"
-      $cfg_searchstore_dir  = "${cfg_data_dir}/search/"
+      $cfg_data_dir         = "${cfg_base_dir}/data"
+      $cfg_searchstore_dir  = "${cfg_data_dir}/search"
       $cfg_temp_dir         = '/tmp/'
-      $cfg_log_dir          = "${cfg_data_dir}/log/"
+      $cfg_log_dir          = "${cfg_data_dir}/log"
 
       # service
       $service_state  = 'running'
