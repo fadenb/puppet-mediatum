@@ -21,6 +21,12 @@ class mediatum::params {
       $cfg_temp_dir         = '/tmp/'
       $cfg_log_dir          = "${cfg_data_dir}/log"
 
+      $cfg_db_host          = 'localhost'
+      $cfg_db_port          = '3306'
+      $cfg_db_database      = 'mediatum'
+      $cfg_db_user          = 'mediatum'
+      $cfg_db_pass          = 'mediatum'
+
       # service
       $service_state  = 'running'
       $service_name   = 'mediatum'

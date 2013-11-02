@@ -13,6 +13,12 @@ class mediatum::config (
   $cfg_searchstore_dir  = $mediatum::params::cfg_searchstore_dir,
   $cfg_temp_dir         = $mediatum::params::cfg_temp_dir,
   $cfg_log_dir          = $mediatum::params::cfg_log_dir,
+
+  $cfg_db_host          = $mediatum::params::cfg_db_host,
+  $cfg_db_port          = $mediatum::params::cfg_db_port,
+  $cfg_db_user          = $mediatum::params::cfg_db_user,
+  $cfg_db_pass          = $mediatum::params::cfg_db_pass,
+  $cfg_db_database      = $mediatum::params::cfg_db_database,
 ) {
   anchor { 'mediatum::config::start': }
   anchor { 'mediatum::config::end': }

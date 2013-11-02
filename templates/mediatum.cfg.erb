@@ -23,12 +23,13 @@ searchstore=<%= @cfg_searchstore_dir %>
 tempdir=<%= @cfg_temp_dir %>
 
 [database]
-type=sqlite # sqlite or mysql
-#dbhost=localhost
-#dbport=3306 # default port for mysql
-#db=mediatum
-#user=mediatumadmin
-#passwd=
+# no sqlite support because as of now (2013-11-02) it is severly broken
+type=mysql
+dbhost=<%= @cfg_db_host %>
+dbport=<%= @cfg_db_port %>
+db=<%= @cfg_db_database %>
+user=<%= @cfg_db_user %>
+passwd=<%= @cfg_db_pass %>
 #cache_size=100000
 
 [ldap]
