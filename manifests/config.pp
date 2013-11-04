@@ -6,7 +6,7 @@ class mediatum::config (
   $config_group   = $mediatum::params::config_group,
   $config_mode    = $mediatum::params::config_mode,
 
-  $cfg_hostname         = $hostname,
+  $cfg_hostname         = $mediatum::params::cfg_hostname,
   $cfg_port             = $mediatum::params::cfg_port,
   $cfg_base_dir         = $mediatum::params::cfg_base_dir,
   $cfg_data_dir         = $mediatum::params::cfg_data_dir,

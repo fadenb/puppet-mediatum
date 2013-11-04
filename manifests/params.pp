@@ -14,6 +14,7 @@ class mediatum::params {
       $config_mode   = '0755'
 
       # application config
+      $cfg_hostname         = 'localhost'
       $cfg_port             = '8081'
       $cfg_base_dir         = '/srv/mediatum'
       $cfg_data_dir         = "${cfg_base_dir}/data"
