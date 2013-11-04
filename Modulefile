@@ -7,4 +7,4 @@ description 'This module will Install and configure mediatum'
 project_page 'N/A'
 
 ## Add dependencies, if any:
-'puppetlabs/stdlib', '>= 4.1.0'
+dependency 'puppetlabs/stdlib', '>= 4.1.0'
