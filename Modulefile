@@ -1,4 +1,4 @@
-name    'mediatum'
+name    'fadenb-mediatum'
 version '0.1.0'
 author  'Tristan Helmich'
 license 'Apache License, Version 2.0'
