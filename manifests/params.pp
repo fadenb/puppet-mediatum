@@ -28,7 +28,7 @@ class mediatum::params {
       $cfg_db_user          = 'mediatum'
       $cfg_db_pass          = 'mediatum'
 
-      # mediatum modules
+      # mediatum modules (default mediatum does not come with extra modules)
       $module_packages    = []
       $module_augeas_conf = ''
 
