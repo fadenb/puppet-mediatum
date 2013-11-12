@@ -19,6 +19,8 @@ class mediatum::config (
   $cfg_db_user          = $mediatum::params::cfg_db_user,
   $cfg_db_pass          = $mediatum::params::cfg_db_pass,
   $cfg_db_database      = $mediatum::params::cfg_db_database,
+
+  $module_augeas_conf = $mediatum::params::module_augeas_conf,
 ) {
   anchor { 'mediatum::config::start': }
   anchor { 'mediatum::config::end': }
@@ -41,6 +43,13 @@ class mediatum::config (
     group   => $config_group,
     mode    => $config_mode,
     content => template('mediatum/mediatum.cfg.erb'),
+    require => Anchor['mediatum::config::start'],
+    before  => Anchor['mediatum::config::end'],
+  }
+
+  augeas { $config_file:
+    changes => $module_augeas_conf,
+    context => $config_file,
     require => Anchor['mediatum::config::start'],
     before  => Anchor['mediatum::config::end'],
   }
