@@ -45,11 +45,12 @@ class mediatum::config (
     content => template('mediatum/mediatum.cfg.erb'),
     require => Anchor['mediatum::config::start'],
     before  => Anchor['mediatum::config::end'],
-  }
-
+  } ->
   augeas { $config_file:
     changes => $module_augeas_conf,
-    context => $config_file,
+    lens    => 'Puppet.lns',
+    incl    => $config_file,
+    context => "/files${config_file}",
     require => Anchor['mediatum::config::start'],
     before  => Anchor['mediatum::config::end'],
   }
