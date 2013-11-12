@@ -29,8 +29,8 @@ class mediatum::params {
       $cfg_db_pass          = 'mediatum'
 
       # mediatum modules
-      $cfg_module_packages    = []
-      $cfg_module_augeas_conf = ''
+      $module_packages    = []
+      $module_augeas_conf = ''
 
       # service
       $service_state  = 'running'
