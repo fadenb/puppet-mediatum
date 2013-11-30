@@ -1,5 +1,5 @@
 name    'fadenb-mediatum'
-version '0.2.0'
+version '0.3.0'
 author  'Tristan Helmich'
 license 'Apache License, Version 2.0'
 summary 'Install and configure mediatum with this Module'
@@ -8,3 +8,4 @@ project_page 'https://github.com/fadenb/puppet-mediatum'
 
 ## Add dependencies, if any:
 dependency 'puppetlabs/stdlib', '>= 4.1.0'
+dependency 'gini/archive',      '>= 0.2.0'

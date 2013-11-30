@@ -19,7 +19,7 @@ class mediatum::params {
       $cfg_base_dir         = '/srv/mediatum'
       $cfg_data_dir         = "${cfg_base_dir}/data"
       $cfg_searchstore_dir  = "${cfg_data_dir}/search"
-      $cfg_temp_dir         = '/tmp/'
+      $cfg_temp_dir         = '/tmp/mediatumtmp' # do not use /tmp as it will create problems with fixture processing
       $cfg_log_dir          = "${cfg_data_dir}/log"
 
       $cfg_db_host          = 'localhost'
@@ -31,6 +31,10 @@ class mediatum::params {
       # mediatum modules (default mediatum does not come with extra modules)
       $module_packages    = []
       $module_augeas_conf = ''
+
+      # mediatum fixtures (vanilla mediatum does not come with fixtures)
+      $fixtures_sql_commands  = '' # path for puppets file resource "source" parameter e.g. file:///vagrant/foo.sql
+      $fixtures_file_archive  = '' # path for puppets file resource "source" parameter e.g. file:///vagrant/foo.tgz
 
       # service
       $service_state  = 'running'
