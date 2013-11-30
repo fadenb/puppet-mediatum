@@ -1,5 +1,6 @@
-class mediatum inherits mediatum::params {
+class mediatum {
   anchor { 'mediatum::start': }   ->
+  class { 'mediatum::params': }   ->
   class { 'mediatum::package': }  ->
   class { 'mediatum::fixtures': } ->
   class { 'mediatum::config': }   ~>
