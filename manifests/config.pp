@@ -59,6 +59,7 @@ class mediatum::config (
   file { [$cfg_base_dir, $cfg_data_dir, $cfg_searchstore_dir, $cfg_temp_dir,
           $cfg_log_dir, ]:
     ensure  => 'directory',
+    recurse => true,
     owner   => $config_owner,
     group   => $config_group,
     require => Anchor['mediatum::config::start'],
