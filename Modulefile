@@ -1,5 +1,5 @@
 name    'fadenb-mediatum'
-version '0.3.1'
+version '0.3.2'
 author  'Tristan Helmich'
 license 'Apache License, Version 2.0'
 summary 'Install and configure mediatum with this Module'
