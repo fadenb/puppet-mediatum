@@ -13,7 +13,7 @@ This will install mediatum, create a basic (__not suitable for production use__)
 The `mediatum` class does not accept parameters. Change settings in [params.pp](/manifests/params.pp) (*not recommended*) or override defaults with hiera (*recommended*).
 
 ### Install & configure mediatum modules
-To install a mediatum-module (e.g. [surfID](http://ksd.ai.ar.tum.de/category/projects/)):
+To install a mediatum-module (e.g. [surfID](http://ksd.ai.ar.tum.de/?page_id=2420)):
 * inform mediatum module which additional packages have to be installed
 * pass the module a list of [Augeas](http://augeas.net/) changes to be executed onto the mediatum configuration file
 
